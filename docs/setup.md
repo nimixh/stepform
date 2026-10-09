@@ -66,3 +66,7 @@ How it works / what to know:
 Why not Cloudflare Workers? Python Workers exist and even support FastAPI, but Workers have no
 filesystem (local SQLite impossible) and D1 would require rewriting all data access against
 binding APIs — a worse demo and a harder interview. Vercel keeps the exact code you see here.
+
+Note: if a CLI deploy ever comes back `Blocked` ("commit author doesn't have permission"),
+Redeploy that deployment from the dashboard, or run `vercel git connect` so pushes deploy
+automatically instead.

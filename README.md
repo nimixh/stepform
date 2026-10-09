@@ -6,9 +6,11 @@ public link, collect responses through the signature full-screen flow, and analy
 
 ![Stepform respondent flow](docs/assets/respondent-question.png)
 
-> **Live demo:** coming soon — backend + frontend deploy in progress.
-> The demo resets periodically (SQLite on serverless); it reseeds itself with sample data.
-> No login needed anywhere: the creator is pre-signed-in, and respondents need no account
+> **Live demo:** [stepform-nu.vercel.app](https://stepform-nu.vercel.app) ·
+> API: [stepform-api.vercel.app/api/forms](https://stepform-api.vercel.app/api/forms) ·
+> repo: [blender-web/stepform](https://github.com/blender-web/stepform).
+> The demo database resets periodically (SQLite on serverless) and reseeds itself with sample
+> data. No login needed anywhere: the creator is pre-signed-in, and respondents need no account
 > (see [Demo access](docs/setup.md#demo-access)).
 
 ## Product tour
