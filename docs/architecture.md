@@ -21,7 +21,10 @@ flowchart LR
 - Dark mode covers the creator workspace only: a `data-theme` attribute on `<html>`
   (`components/theme.tsx`, sun/moon toggle, stored preference with OS fallback, applied before
   first paint), with all colors flowing through CSS variables in `app/globals.css`. The
-  respondent flow always renders the form's own theme, untouched.
+  builder canvas preview uses workspace-themed `.pv-*` classes (bound to `--ink`), not the
+  respondent `.fill-*` classes. The respondent flow always renders the form's own theme:
+  every workspace class it reuses (`.pop`, `.skel`, `.toast`) is pinned back to the form
+  theme under `.fill`, so app dark mode never leaks into it.
 - `backend/main.py` — all routes plus server-side validation (`validate_answers`).
 - `backend/models.py` — four tables (below). `backend/seed.py` builds the demo dataset and is
   re-run automatically when the database is empty (fresh clones, serverless cold starts).
