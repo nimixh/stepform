@@ -269,7 +269,7 @@ function Flow() {
   return (
     <div className="fill" style={theme}>
       {isDraftPreview && !done && (
-        <div style={{ background: "#1a1a1a", color: "#fff", textAlign: "center", fontSize: 12.5, padding: "7px", fontWeight: 600 }}>
+        <div style={{ background: "var(--fill-text, #1a1a1a)", color: "var(--fill-bg, #fafafa)", textAlign: "center", fontSize: 12.5, padding: "7px", fontWeight: 600 }}>
           Draft preview — responses won&apos;t be saved · <a href={`/forms/${form.id}`} style={{ textDecoration: "underline" }}>Back to builder</a>
         </div>
       )}
@@ -393,7 +393,7 @@ function Flow() {
                           role="option"
                           aria-selected={answers[q.id] === o.label}
                           className="pop-item"
-                          style={i === dropIndex ? { background: "#ececf0", outline: "2px solid var(--ink)", outlineOffset: -2 } : undefined}
+                          style={i === dropIndex ? { background: "color-mix(in srgb, var(--fill-text, #1a1a1a) 10%, transparent)", outline: "2px solid var(--fill-text, #1a1a1a)", outlineOffset: -2 } : undefined}
                           onMouseEnter={() => setDropIndex(i)}
                           onClick={() => {
                             setVal(q.id, o.label);

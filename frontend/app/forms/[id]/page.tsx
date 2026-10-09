@@ -374,7 +374,7 @@ function Builder() {
                 </div>
               )}
             </div>
-            <button className="icon-btn" title="Toggle mobile preview" onClick={() => setMobileView((m) => !m)} style={mobileView ? { background: "rgba(0,0,0,0.1)" } : undefined}>
+            <button className="icon-btn" title="Toggle mobile preview" onClick={() => setMobileView((m) => !m)} style={mobileView ? { background: "color-mix(in srgb, var(--ink) 12%, transparent)" } : undefined}>
               <IconMobile />
             </button>
             <a

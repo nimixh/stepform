@@ -39,7 +39,7 @@ export default function CanvasEditor({ q, index, onPatch }: Props) {
 
       {(q.type === "short_text" || q.type === "email" || q.type === "number") && (
         <input
-          className="canvas-input"
+          className="pv-input"
           disabled
           placeholder={
             q.type === "email" ? "name@example.com" : q.type === "number" ? "123" : "Type your answer here…"
@@ -48,7 +48,7 @@ export default function CanvasEditor({ q, index, onPatch }: Props) {
       )}
 
       {q.type === "long_text" && (
-        <textarea className="canvas-input" disabled placeholder="Type your answer here…" rows={2} style={{ fontSize: 22 }} />
+        <textarea className="pv-input" disabled placeholder="Type your answer here…" rows={2} style={{ fontSize: 22 }} />
       )}
 
       {(q.type === "multiple_choice" || q.type === "dropdown") && (
@@ -57,7 +57,7 @@ export default function CanvasEditor({ q, index, onPatch }: Props) {
           {opts.map((o, i) => (
             <button
               key={o.id}
-              className={`choice${previewChoice === o.id ? " selected" : ""}`}
+              className={`pv-choice${previewChoice === o.id ? " selected" : ""}`}
               style={{ pointerEvents: "auto" } as React.CSSProperties}
               onClick={() => setPreviewChoice(previewChoice === o.id ? null : o.id)}
             >
@@ -74,7 +74,7 @@ export default function CanvasEditor({ q, index, onPatch }: Props) {
           {(["Yes", "No"] as const).map((v) => (
             <button
               key={v}
-              className={`choice${previewChoice === v ? " selected" : ""}`}
+              className={`pv-choice${previewChoice === v ? " selected" : ""}`}
               onClick={() => setPreviewChoice(previewChoice === v ? null : v)}
             >
               <span className="key">{v[0]}</span>
@@ -86,11 +86,11 @@ export default function CanvasEditor({ q, index, onPatch }: Props) {
       )}
 
       {q.type === "rating" && (
-        <div className="stars">
+        <div className="pv-stars">
           {Array.from({ length: maxRating }, (_, i) => (
             <button
               key={i}
-              className={`star${previewChoice === String(i + 1) ? " selected" : ""}`}
+              className={`pv-star${previewChoice === String(i + 1) ? " selected" : ""}`}
               onClick={() => setPreviewChoice(String(i + 1))}
             >
               {i + 1}

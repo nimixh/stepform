@@ -158,7 +158,6 @@ function Dashboard() {
                     background: THUMB_GRADIENTS[thumbIndex(f.id, THUMB_GRADIENTS.length)],
                     fontSize: 40,
                     fontWeight: 800,
-                    color: "rgba(26,26,26,0.55)",
                   }}
                 >
                   {(f.title.trim()[0] ?? "F").toUpperCase()}
