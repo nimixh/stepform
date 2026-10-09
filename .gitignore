@@ -1,0 +1,14 @@
+__pycache__/
+*.pyc
+.venv/
+*.db*
+!.gitkeep
+node_modules/
+.next/
+out/
+dist/
+.vercel/
+.DS_Store
+*.log
+frontend/.env.local
+backend/.env
