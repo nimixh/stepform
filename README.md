@@ -8,7 +8,7 @@ public link, collect responses through the signature full-screen flow, and analy
 
 > **Live demo:** [stepform-nu.vercel.app](https://stepform-nu.vercel.app) ·
 > API: [stepform-api.vercel.app/api/forms](https://stepform-api.vercel.app/api/forms) ·
-> repo: [blender-web/stepform](https://github.com/blender-web/stepform).
+> repo: [nimixh/stepform](https://github.com/nimixh/stepform).
 > The demo database resets periodically (SQLite on serverless) and reseeds itself with sample
 > data. No login needed anywhere: the creator is pre-signed-in, and respondents need no account
 > (see [Demo access](docs/setup.md#demo-access)).
