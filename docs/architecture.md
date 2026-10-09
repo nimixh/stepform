@@ -18,6 +18,10 @@ flowchart LR
 
 - `frontend/` — three routes: `/` (dashboard), `/forms/[id]` (builder with Content/Share/Results
   tabs), `/s/[id]` (public respondent flow). Typed API client in `frontend/lib/api.ts`.
+- Dark mode covers the creator workspace only: a `data-theme` attribute on `<html>`
+  (`components/theme.tsx`, sun/moon toggle, stored preference with OS fallback, applied before
+  first paint), with all colors flowing through CSS variables in `app/globals.css`. The
+  respondent flow always renders the form's own theme, untouched.
 - `backend/main.py` — all routes plus server-side validation (`validate_answers`).
 - `backend/models.py` — four tables (below). `backend/seed.py` builds the demo dataset and is
   re-run automatically when the database is empty (fresh clones, serverless cold starts).

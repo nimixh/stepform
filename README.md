@@ -30,7 +30,7 @@ public link, collect responses through the signature full-screen flow, and analy
 - **Builder** — title + ordered questions; add, edit, drag-and-drop reorder (with keyboard
   fallback), duplicate, delete; 8 types (short/long text, multiple choice, dropdown, email,
   number, yes/no, rating); required toggle; help text; live preview; welcome + thank-you screens;
-  custom themes (background, text, button, font)
+  custom themes (background, text, button, font); dark mode for the creator workspace
 - **Management** — dashboard with draft/published status and response counts; create, rename,
   duplicate, delete; publish/unpublish with shareable `/s/{id}` link; everything persisted
 - **Respondent** — full-screen one-at-a-time flow, slide/fade transitions, Enter/↑↓/shortcut keys,

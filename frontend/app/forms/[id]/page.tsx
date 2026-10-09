@@ -5,6 +5,7 @@ import { api } from "@/lib/api";
 import type { FormDetail, Question, QuestionType } from "@/lib/types";
 import { QUESTION_TYPES } from "@/lib/types";
 import { ToastProvider, useToast } from "@/components/toast";
+import { ThemeToggle } from "@/components/theme";
 import { uid } from "@/components/builder/hooks";
 import LeftPanel from "@/components/builder/LeftPanel";
 import CanvasEditor from "@/components/builder/CanvasEditor";
@@ -253,6 +254,7 @@ function Builder() {
         </div>
 
         <div style={{ display: "flex", gap: 8, alignItems: "center" }}>
+          <ThemeToggle />
           <button
             className="icon-btn bordered"
             title="Copy respondent link"

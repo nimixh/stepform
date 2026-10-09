@@ -4,6 +4,7 @@ import { useRouter } from "next/navigation";
 import { api } from "@/lib/api";
 import type { FormSummary } from "@/lib/types";
 import { ToastProvider, useToast } from "@/components/toast";
+import { ThemeToggle } from "@/components/theme";
 
 function thumbIndex(id: string, n: number): number {
   let h = 0;
@@ -116,6 +117,7 @@ function Dashboard() {
           <span className="here">Forms</span>
         </div>
         <div style={{ marginLeft: "auto", display: "flex", gap: 10, alignItems: "center" }}>
+          <ThemeToggle />
           <button className="btn btn-dark btn-sm" onClick={create}>
             <span style={{ fontSize: 16, lineHeight: 0.5 }}>+</span> New form
           </button>
